@@ -1,13 +1,13 @@
 //
-//  {{cookiecutter.project_name}}UITestsLaunchTests.swift
-//  {{cookiecutter.project_name}}UITests
+//  {{cookiecutter.app_name}}UITestsLaunchTests.swift
+//  {{cookiecutter.app_name}}UITests
 //
 //  Created by {{cookiecutter.author_name}} on {% now 'utc', '%d/%m/%y' %}.
 //
 
 import XCTest
 
-final class {{cookiecutter.project_name}}UITestsLaunchTests: XCTestCase {
+final class {{cookiecutter.app_name}}UITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

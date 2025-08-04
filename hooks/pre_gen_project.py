@@ -12,10 +12,13 @@ def main():
     # Get cookiecutter context
     context = {
         'project_name': '{{cookiecutter.project_name}}',
+        'app_name': '{{cookiecutter.app_name}}',
         'organization_identifier': '{{cookiecutter.organization_identifier}}',
         'author_name': '{{cookiecutter.author_name}}',
         'author_email': '{{cookiecutter.author_email}}',
-        'minimum_ios_version': '{{cookiecutter.minimum_ios_version}}'
+        'minimum_ios_version': '{{cookiecutter.minimum_ios_version}}',
+        'version_name': '{{cookiecutter.version_name}}',
+        'use_swift_data': '{{cookiecutter.use_swift_data}}'
     }
     
     # Store context in a temporary file

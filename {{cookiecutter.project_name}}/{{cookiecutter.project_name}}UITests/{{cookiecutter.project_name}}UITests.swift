@@ -1,13 +1,13 @@
 //
-//  {{cookiecutter.project_name}}UITests.swift
-//  {{cookiecutter.project_name}}UITests
+//  {{cookiecutter.app_name}}UITests.swift
+//  {{cookiecutter.app_name}}UITests
 //
 //  Created by {{cookiecutter.author_name}} on {% now 'utc', '%d/%m/%y' %}.
 //
 
 import XCTest
 
-final class {{cookiecutter.project_name}}UITests: XCTestCase {
+final class {{cookiecutter.app_name}}UITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -29,6 +29,8 @@ final class {{cookiecutter.project_name}}UITests: XCTestCase {
         app.launch()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertTrue(app.staticTexts["Hello, World!"].exists)
+        XCTAssertTrue(app.staticTexts["Welcome to {{cookiecutter.app_name}}"].exists)
     }
 
     @MainActor
