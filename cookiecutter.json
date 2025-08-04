@@ -1,0 +1,8 @@
+{
+    "project_name": "MyIOSApp",
+    "project_description": "A simple iOS Hello World app using SwiftUI",
+    "author_name": "Your Name",
+    "author_email": "your.email@example.com",
+    "organization_identifier": "com.example",
+    "minimum_ios_version": "15.0"
+} 
