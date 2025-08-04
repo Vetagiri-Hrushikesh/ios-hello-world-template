@@ -1,47 +1,57 @@
 # iOS Hello World Template
 
-A cookiecutter template for creating iOS Hello World applications using SwiftUI.
+A professional, production-ready cookiecutter template for creating iOS Hello World applications using modern SwiftUI development practices.
 
-## Features
+## 🚀 Features
 
-- Modern SwiftUI-based iOS app
-- Clean project structure
-- Unit tests setup
-- UI tests setup
-- Proper Xcode project configuration
-- Ready-to-run Hello World application
-- **Automatic Xcode project renaming and configuration**
-- **Customizable bundle identifier and iOS version**
+- **Modern iOS Development**: Swift + SwiftUI
+- **Clean Architecture**: Well-structured project layout
+- **Professional Setup**: Optimized Xcode project configuration
+- **Smart Variables**: Only essential, used variables (9 total)
+- **Auto-Configuration**: Automatic project setup and naming
+- **Testing Ready**: Unit tests and UI tests included
+- **SwiftUI Best Practices**: Modern UI development patterns
 
-## Usage
+## 📋 Requirements
 
-1. Install cookiecutter if you haven't already:
-   ```bash
-   pip install cookiecutter
-   ```
+Run the version detection script to check your environment:
 
-2. Generate a new iOS project:
-   ```bash
-   cookiecutter ios-hello-world-template
-   ```
+```bash
+python scripts/version_detector.py > requirements.md
+```
 
-3. Follow the prompts to customize your project:
-   - `project_name`: Name of your iOS app
-   - `project_description`: Description of your app
-   - `author_name`: Your name
-   - `author_email`: Your email
-   - `organization_identifier`: Your organization identifier (e.g., com.yourcompany)
-   - `minimum_ios_version`: Minimum iOS version (default: 15.0)
+### Minimum Requirements
+- **Xcode**: 15.0 or higher
+- **Swift**: 5.9 or higher
+- **macOS**: 13.0 (Ventura) or higher
+- **iOS Deployment Target**: 15.0 or higher
 
-4. The template will automatically:
-   - Rename all Xcode project references
-   - Update bundle identifiers
-   - Configure minimum iOS version
-   - Set up proper scheme names
+## 🛠️ Installation
 
-5. Open the generated Xcode project and run it on the simulator or device.
+### 1. Install Cookiecutter
+```bash
+pip install cookiecutter
+```
 
-## Project Structure
+### 2. Generate Project
+```bash
+# From GitHub
+cookiecutter https://github.com/Vetagiri-Hrushikesh/ios-hello-world-template.git
+
+# Or from local directory
+cookiecutter ios-hello-world-template
+```
+
+### 3. Follow the Prompts
+The template will ask for 9 essential configuration values:
+
+| Category | Variables | Description |
+|----------|-----------|-------------|
+| **Project** | 4 | Name, description, author info |
+| **Configuration** | 3 | Organization ID, iOS version, SwiftData |
+| **Version** | 2 | Version name and SwiftData usage |
+
+## 📁 Project Structure
 
 ```
 {{cookiecutter.project_name}}/
@@ -57,23 +67,156 @@ A cookiecutter template for creating iOS Hello World applications using SwiftUI.
     └── {{cookiecutter.project_name}}UITestsLaunchTests.swift
 ```
 
-## Automatic Configuration
+## 🎯 What You Get
 
-This template includes post-generation hooks that automatically:
+### ✅ Ready-to-Run App
+- **Hello World Screen**: Professional UI with SwiftUI
+- **Version Display**: Shows app version and welcome message
+- **Responsive Layout**: Works on all iOS devices
+- **Dark/Light Theme**: Automatic theme support
 
-- ✅ Rename all Xcode project references from template names to your project name
-- ✅ Update bundle identifiers to use your organization identifier
-- ✅ Configure minimum iOS deployment target
-- ✅ Rename and update Xcode schemes
-- ✅ Clean up temporary files
+### ✅ Development Setup
+- **Xcode Project**: Properly configured project file
+- **Dependencies**: All necessary iOS frameworks included
+- **Build Configuration**: Optimized for development and release
+- **Code Style**: Consistent Swift coding standards
 
-## Requirements
+### ✅ Testing Framework
+- **Unit Tests**: XCTest setup with example test
+- **UI Tests**: XCTest UI setup with example test
+- **Test Schemes**: Configured for iOS testing
 
-- Xcode 15.0 or later
-- iOS 15.0 or later
-- Swift 5.9 or later
-- Python 3.6+ (for cookiecutter)
+## 🚀 Quick Start
 
-## License
+1. **Generate the project** (see Installation above)
+2. **Open in Xcode**:
+   ```bash
+   cd {{cookiecutter.project_name}}
+   open {{cookiecutter.project_name}}.xcodeproj
+   ```
+3. **Run the app**:
+   - Select a device/simulator
+   - Click the Run button (▶️) or press `Cmd + R`
 
-This template is provided as-is for educational and development purposes. 
+## 🔧 Customization
+
+### SwiftData Integration
+- `use_swift_data`: Enable/disable SwiftData for data persistence
+- Automatically configures ModelContainer and @Query properties
+
+### iOS Version
+- `minimum_ios_version`: Set minimum iOS deployment target (15.0)
+
+### Bundle Configuration
+- `organization_identifier`: Your organization's bundle identifier prefix
+- Automatically generates proper bundle IDs
+
+## 📱 App Features
+
+### Main Screen
+- **Globe Icon**: SF Symbol with proper scaling
+- **Hello World Text**: Large, bold title
+- **Welcome Message**: App name display
+- **Version Info**: Shows current app version
+
+### UI Components
+- **SwiftUI**: Modern declarative UI framework
+- **Responsive Layout**: Adapts to different screen sizes
+- **Theme Support**: Automatic dark/light mode
+- **Accessibility**: Built-in accessibility support
+
+## 🧪 Testing
+
+### Unit Tests
+```bash
+# In Xcode: Product → Test (Cmd + U)
+# Or via command line:
+xcodebuild test -scheme {{cookiecutter.project_name}} -destination 'platform=iOS Simulator,name=iPhone 15'
+```
+
+### UI Tests
+```bash
+# In Xcode: Product → Test (Cmd + U)
+# UI tests run automatically with unit tests
+```
+
+### Test Coverage
+- **Unit Tests**: App logic and data validation
+- **UI Tests**: User interface interactions
+- **Launch Tests**: App launch performance
+
+## 📦 Build & Deploy
+
+### Debug Build
+```bash
+xcodebuild build -scheme {{cookiecutter.project_name}} -configuration Debug
+```
+
+### Release Build
+```bash
+xcodebuild build -scheme {{cookiecutter.project_name}} -configuration Release
+```
+
+### Archive for App Store
+```bash
+xcodebuild archive -scheme {{cookiecutter.project_name}} -archivePath {{cookiecutter.project_name}}.xcarchive
+```
+
+## 🔍 Troubleshooting
+
+### Common Issues
+
+1. **Build Errors**
+   - Clean build folder (Product → Clean Build Folder)
+   - Reset package caches (File → Packages → Reset Package Caches)
+
+2. **Simulator Issues**
+   - Reset simulator (Device → Erase All Content and Settings)
+   - Create new simulator (Window → Devices and Simulators)
+
+3. **Code Signing Issues**
+   - Check team selection in project settings
+   - Verify bundle identifier is unique
+
+### Performance Tips
+
+- Use Xcode's built-in Instruments for profiling
+- Enable Metal API Validation in simulator
+- Use SwiftUI previews for rapid UI development
+
+## 🚀 Advanced Features
+
+### SwiftData (Optional)
+If enabled, the template includes:
+- **ModelContainer**: Data persistence setup
+- **@Query**: Automatic data fetching
+- **ModelContext**: Data manipulation
+
+### Conditional Imports
+- **SwiftData**: Only imported when enabled
+- **SwiftUI**: Always included
+- **Testing**: Proper test framework imports
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This template is provided as-is for educational and development purposes.
+
+## 🙏 Acknowledgments
+
+- **SwiftUI**: Apple's modern UI framework
+- **Xcode**: Apple's development environment
+- **Cookiecutter**: Project template generator
+
+---
+
+**Made with ❤️ for the iOS development community**
+
+*Generated with iOS Hello World Template v1.0.0* 
